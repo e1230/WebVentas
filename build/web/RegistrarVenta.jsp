@@ -11,11 +11,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        <title>JSP Page</title>
+        <title>Ventas</title>
+        <style>
+            @media print{
+                a, .parte1, .btn,.acc{
+                    display: none;
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="d-flex">
-            <div class="col-sm-4">
+            <div class="col-sm-4 parte1">
                 <div class="card">
                     <form action="Controlador?menu=NuevaVenta" method="POST">
                         <div class="card-body">
@@ -85,7 +92,7 @@
                                     <th>Precio</th>
                                     <th>Cantidad</th>
                                     <th>Subtotal</th>
-                                    <th>Acciones</th>
+                                    <th class="acc">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
