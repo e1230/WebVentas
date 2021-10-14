@@ -171,10 +171,11 @@ public class Controlador extends HttpServlet {
                         for(int i=0; i<lista.size(); i++){
                             Producto pr = new Producto();
                             int cantidad=lista.get(i).getCantidad();
-                            int idproducto=lista.get(i).getCantidad();
+                            int idproducto=lista.get(i).getIdProducto();
                             ProductoDAO pdao = new ProductoDAO();
                             pr=pdao.buscar(idproducto);
                             int sac=pr.getStock()-cantidad;
+                            System.out.println(pr.getStock());
                             pdao.actualizarstock(idproducto,sac);
                             
                         }
